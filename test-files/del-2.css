@@ -1,0 +1,20 @@
+.left-element {
+    padding: 10px;
+    border: 1px solid gray;
+    margin: 1;
+    float: top;
+}
+
+.left-div {
+	position:fixed;
+	float: left;
+	width: 300px;
+	background-color: gray;
+
+	padding:0;
+    margin:0;
+
+    top:0;
+    left:0;
+    height: 100%;
+}
