@@ -28,17 +28,13 @@
 	text-shadow: 1px 1px #305667;
 }
 
-.image-div {
-	float: top;
+#image-div {
 	height: 120px;
 	text-align: center;
 }
 
 #logo {
 	height: 80%;
-	margin: 0 auto;
-	display: inline-block;
-	color: #2D2D2D;
 }
 
 .left-element {
