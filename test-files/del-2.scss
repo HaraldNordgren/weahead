@@ -1,3 +1,6 @@
+$darker-grey: #305667;
+$menu-border: 1px solid #E3E3E3;
+
 body {
 	position: fixed;
 	width: 100%;
@@ -14,7 +17,7 @@ body {
 	width: 220px;
 	height: 100%;
 	background-color: #F1F1F1;
-	border-right: 1px solid #E3E3E3;
+	border-right: $menu-border;
 	position: relative;
 }
 
@@ -24,8 +27,8 @@ body {
 	margin-left: 20px;
 	margin-top: 20px;
 	font-size: 40px;
-	color: #305667;
-	text-shadow: 1px 1px #305667;
+	color: $darker-grey;
+	text-shadow: 1px 1px $darker-grey;
 }
 
 #logo-div {
@@ -49,19 +52,19 @@ body {
     margin: 1;
     cursor: pointer;
 	font-size: 14px;
-}
 
-.left-element:hover {
-	background-color: #305667;
-	color: white;
+	&:hover {
+		background-color: $darker-grey;
+		color: white;
+	}
 }
 
 .top-border {
-	border-top: 1px solid #E3E3E3;
+	border-top: $menu-border;
 }
 
 .bottom-border {
-	border-bottom: 1px solid #E3E3E3;
+	border-bottom: $menu-border;
 }
 
 #logout-div {
