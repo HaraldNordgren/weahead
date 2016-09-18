@@ -1,5 +1,10 @@
 $darker-grey: #305667;
 $menu-border: 1px solid #E3E3E3;
+$spritesheet: url(assets/icons.png);
+
+@function sprite-offset($step) {
+	@return -32px * $step;
+}
 
 body {
 	position: fixed;
@@ -10,6 +15,7 @@ body {
     top: 0;
     left: 0;
     font-family: Sans-Serif;
+	text-transform: uppercase;
 }
 
 .left-div {
@@ -56,6 +62,34 @@ body {
 	&:hover {
 		background-color: $darker-grey;
 		color: white;
+
+		#tidrapportering-sprite {
+		    background: $spritesheet sprite-offset(2) sprite-offset(1);
+		}
+
+		#historik-sprite {
+			background: $spritesheet sprite-offset(3) sprite-offset(1);
+		}
+
+		#projekt-sprite {
+		    background: $spritesheet 0 sprite-offset(1);
+		}
+
+		#aktiviteter-sprite {
+		    background: $spritesheet sprite-offset(1) sprite-offset(1);
+		}
+
+		#personal-sprite {
+		    background: $spritesheet sprite-offset(4) sprite-offset(1);
+		}
+
+		#logout-sprite {
+		    background: $spritesheet sprite-offset(5) sprite-offset(1);
+		}
+	}
+
+	img {
+		float:right;
 	}
 }
 
@@ -71,4 +105,40 @@ body {
 	position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+.sprite {
+	width: 16px;
+    height: 16px;
+}
+
+#tidrapportering-sprite {
+	@extend .sprite;
+    background: $spritesheet sprite-offset(2) 0;
+}
+
+
+#historik-sprite {
+	@extend .sprite;
+	background: $spritesheet sprite-offset(3) 0;
+}
+
+#projekt-sprite {
+	@extend .sprite;
+    background: $spritesheet 0 0;
+}
+
+#aktiviteter-sprite {
+	@extend .sprite;
+    background: $spritesheet sprite-offset(1) 0;
+}
+
+#personal-sprite {
+	@extend .sprite;
+    background: $spritesheet sprite-offset(4) 0;
+}
+
+#logout-sprite {
+	@extend .sprite;
+    background: $spritesheet sprite-offset(5) 0;
 }
